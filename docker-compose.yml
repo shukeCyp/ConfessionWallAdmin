@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  admin:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: confession-wall-admin
+    ports:
+      - "4173:4173"  # vite preview 默认端口
+    restart: always
+    networks:
+      - confession-network
+
+networks:
+  confession-network:
+    driver: bridge 
