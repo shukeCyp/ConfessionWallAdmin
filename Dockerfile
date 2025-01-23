@@ -1,5 +1,5 @@
 # 构建阶段
-FROM node:18 as builder
+FROM npmjs/npm-docker-baseline:18 as builder
 
 WORKDIR /app
 
