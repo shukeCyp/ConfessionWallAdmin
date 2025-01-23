@@ -1,5 +1,5 @@
 # 构建阶段
-FROM npmjs/npm-docker-baseline:18 as builder
+FROM 3ajodtx9.mirror.aliyuncs.com/library/node:18 as builder
 
 WORKDIR /app
 
