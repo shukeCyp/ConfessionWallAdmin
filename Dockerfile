@@ -1,5 +1,5 @@
 # 构建阶段
-FROM 3ajodtx9.mirror.aliyuncs.com/library/node:18 as builder
+FROM registry.cn-beijing.aliyuncs.com/library/node:18
 
 WORKDIR /app
 
