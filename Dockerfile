@@ -1,5 +1,5 @@
 # 构建阶段
-FROM registry.cn-hangzhou.aliyuncs.com/aliyun/node:18
+FROM node:18.19.0
 
 WORKDIR /app
 
