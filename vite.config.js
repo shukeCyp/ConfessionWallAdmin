@@ -14,6 +14,8 @@ export default defineConfig({
     }
   },
   server: {
+    host: true,
+    allowedHosts: '*',
     proxy: {
       '/api': {
         target: 'https://confession.lyvideo.top',
