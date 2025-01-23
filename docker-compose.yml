@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: confession-wall-admin
     ports:
-      - "4173:4173"  # vite preview 默认端口
+      - "5173:5173"  # vite 开发服务器默认端口
     restart: always
     networks:
       - confession-network

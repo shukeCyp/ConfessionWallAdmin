@@ -1,5 +1,5 @@
 # 构建阶段
-FROM node:18.19.0
+FROM node:latest
 
 WORKDIR /app
 
@@ -24,10 +24,8 @@ RUN npm install
 # 复制源代码
 COPY . .
 
-# 构建项目
-RUN npm run build
+# 暴露端口
+EXPOSE 5173
 
-# 将构建产物放在 /app/dist 目录
-VOLUME /app/dist
-
-CMD ["npm", "run", "preview"] 
+# 启动开发服务器
+CMD ["npm", "run", "serve"] 
