@@ -1,7 +1,10 @@
 # 构建阶段
-FROM node:18-alpine as builder
+FROM registry.cn-hangzhou.aliyuncs.com/library/node:18-alpine as builder
 
 WORKDIR /app
+
+# 设置 npm 使用阿里云镜像源
+RUN npm config set registry https://registry.npmmirror.com
 
 # 复制依赖文件
 COPY package*.json ./
