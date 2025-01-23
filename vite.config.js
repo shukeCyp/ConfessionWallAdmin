@@ -15,7 +15,13 @@ export default defineConfig({
   },
   server: {
     host: true,
-    allowedHosts: '*',
+    port: 5173,
+    cors: true,
+    allowedHosts: [
+      'admin666.lyvideo.top',
+      'localhost',
+      '127.0.0.1'
+    ],
     proxy: {
       '/api': {
         target: 'https://confession.lyvideo.top',
